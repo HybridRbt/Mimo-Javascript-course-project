@@ -54,7 +54,7 @@
 
       //Chapter 8
       var text = "Repetition, simple sentences, and supporting images familiarize the beginning reading with the color blue.";
-      var words = text.split(" ");
+      /* var words = text.split(" ");
       for (var i = 0; i < words.length; i++) {
         if (words[i].endsWith("ize")) {
           words[i] = words[i].replace("ize", "ise");
@@ -62,8 +62,25 @@
           words[i] = words[i].replace("or", "our");
         }
       }
-      text = words.join(" ");
+      text = words.join(" "); */
+      //moved into function in the following chap
       console.log(text);
+
+      //Chapter 9
+      function translate(text) {
+        var words = text.split(" ");
+        for (var i = 0; i < words.length; i++) {
+          if (words[i].endsWith("ize")) {
+            words[i] = words[i].replace("ize", "ise");
+          } else if (words[i].endsWith("or")) {
+            words[i] = words[i].replace("or", "our");
+          }
+        }
+        text = words.join(" ");
+        return text;
+      }
+      var transText = translate(text);
+      console.log(transText);
     </script>
   </body>
 </html>
