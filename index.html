@@ -51,6 +51,19 @@
       var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
       var dayName = days[day];
       console.log("It's " + dayName + ", " + date.toTimeString() + ". Time to get up.");
+
+      //Chapter 8
+      var text = "Repetition, simple sentences, and supporting images familiarize the beginning reading with the color blue.";
+      var words = text.split(" ");
+      for (var i = 0; i < words.length; i++) {
+        if (words[i].endsWith("ize")) {
+          words[i] = words[i].replace("ize", "ise");
+        } else if (words[i].endsWith("or")) {
+          words[i] = words[i].replace("or", "our");
+        }
+      }
+      text = words.join(" ");
+      console.log(text);
     </script>
   </body>
 </html>
